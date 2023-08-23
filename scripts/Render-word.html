@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="./Addons/epic.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <title>RenderWord-R&D</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport">
+    <style>
+        body,
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        img.test {
+            width: 100%;
+            height: auto;
+        }
+
+        .epic-bar .epic-button {
+            padding: 16px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body width="device-width">
+    <section class="epic-container epic-center epic-content" style="max-width:800px">
+
+        <p><a href="https://epicrd.github.io/RDdept.html"
+                class="epic-button epic-black epic-padding-large epic-large epic-margin-top epic-opacity epic-hover-opacity-on"><--Back To R&D Website</a></p>
+
+        <h1 class="epic-wide">Render-Word Engine</h1>
+        <h3 style="color:#000000;">Research And Development Department</h3>
+
+        <p class="epic-justify">
+            Due to an issue with JARVIS, on <b>25-Sep-2020</b> Epicalable had decided to task
+            R&D Department to come up with a solution and a detailed report on why said solution should be adopted.<br>
+            Below is a detailed report on which Render-Word Engine was proposed at that time for consideration as a solution
+            to Epicalable.
+            <br>
+            <b>The following report was presented to Epicalable on 10-Nov-2020.</b>
+        </p>
+
+        <p class="epic-justify">
+            <b><u>Introduction:</u></b><br>
+            Eversince Epicalable was formed we had an aim to create a chatbot coupled in a GUI to help users move away from the command-line 
+            interface. Epicalable also had a long-term goal of creating a dataset stored on a seperate file which could be easily edited 
+            by any user with no prior coding knowledge to help expand the chatbot's responses and vocabulary.<br><br>
+            Most of the developers working on this project came up with a vague concept of creating an algorithm to run through a
+            file in search of a given keywords by the user. Epicalable's Admin Department gave the green light to create this algorithm.<br>
+            While working on the algorithm, we ran into some unforseen problems such as:<br>
+            1. What type of file should we store our dataset in?<br>
+            2. How are we going to extract the data from the file?<br>
+            3. Could we show different outputs for the same input given in the chatbot?<br><br>
+        </p>
+
+        <p class="epic-justify">
+            <b><u>Getting To Work:</u></b><br>
+            Upon getting the task to be done on our table, our Researchers firstly scoured the internet looking for which type of file 
+            could best store our dataset. We came across many types such as xml, csv and xaml, but when coming across Json we found that it was easy to read 
+            and write, supports strings, numbers and boolean and is data-oriented. So we decided to adopt Json and an added bonus was Python has support and 
+            libaries for Json to help extract data.<br><br>
+            Soon we created a json file and inserted our dataset with specific keywords in it. We created it based on the concept that once the user enters a 
+            text, JARVIS will search for matching keywords in the text and would show a random appropriate output.
+        </p>
+
+        <img class="epic-image epic-round-large" src="./Addons/jarindents.png" width="350">
+        <label class="epic-justify">Jarindents: The file where the info is stored</label>
+
+        <p class="epic-justify">
+            <b><u>Problem Solving:</u></b><br>
+            We ran into a new problem, retrieving data from a json file is kind of harder than accessing a dictionary. We would need to open the json file, followed by 
+            taking the user's input and running it through the entire file for matching keywords under <b>'tags'</b> then display a random output from the list of available outputs 
+            under <b>'response'</b>.<br><br>
+
+            Our researchers at that time was quite used to looping so we decided to adopt that and also use the random library to help pick an output.
+            
+            We experimented with a <b>'for loop'</b> to loop through the entire file and an <b>'if loop'</b> to search for matching keywords. Once the matching keyword is 
+            found we used the <b>'from random import choice'</b> library to randomly pick a output under <b>'response'</b>.<br><br>
+
+            We also decided to capitalize each word that the user inputs to make sure it matches with our capitalized Json tags and in subsequent versions 
+            once JarAudit was introduced as a way to audit the chatbot's history it was seeminglessly integrated into Render-word. Render-word would hence send the 
+            input binded with the current time and it will be stored in the JarAudit file.
+        </p>
+
+        <img class="epic-image epic-round-large" src="./Addons/Renderword.png" width="350">
+        <label class="epic-justify">Current iteration of the Render-Word Engine</label>
+
+        <p class="epic-justify">
+            <b><u>Aftermath:</u></b>
+            The concept worked and it was successfully implemented into our then under-developing chatbot. Admin Department was
+            satisfied with the result and gave the green light to push this code to production. This issue also marks the 
+            first time that Epicalable officially recognised the importance of a full time R&D Dept rather than a team from the 
+            Coding Dept that works part-time as R&D researchers and hence the R&D Dept was formed.
+        </p>
+        <br>
+        <br>
+        <b>The above report was presented to Epicalable on 10-Nov-2020.<br>Last Revised: 23-Aug-2023</b>
+    </section>
+
+
+    <section class="epic-row-padding epic-center epic-light-grey">
+        <h2 class="epic-wide"> Research And Development</h2>
+    </section>
+
+    <!-- Organisation Footer -->
+    <footer class="epic-container epic-padding-64 epic-center epic-black epic-xlarge">
+        <a href="https://www.youtube.com/@Epicalable_Industries"><i class="fa fa-youtube"></i></a>
+        <a href="https://github.com/Epicalable"><i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/_Epicalable_"><i class="fa fa-twitter"></i></a>
+        <p class="epic-medium">
+            Designed by <a href="https://github.com/Epicalable" target="_blank">Epicalable</a>
+            <br>(C) Epicalable 2023
+        </p>
+    </footer>
+
+</body>
+
+</html>
