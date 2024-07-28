@@ -49,17 +49,8 @@
         <h3 style="color:#000000;">Research And Development Department</h3>
 
         <p class="epic-justify">
-            Due to issues with JARVIS, on <b>25-Sep-2020</b> Epicalable had decided to task
-            R&D Department to come up with a solution and a detailed report on why said solution should be adopted.<br>
-            Below is a detailed report on which Render-Word Engine was proposed at that time for consideration as a solution
-            to Epicalable.
-            <br>
-            <b>The following report was presented to Epicalable on 10-Nov-2020.</b>
-        </p>
-
-        <p class="epic-justify">
             <b><u>Introduction:</u></b><br>
-            Eversince Epicalable was formed, we had an aim to create a chatbot coupled in a GUI to help users move away from the command-line 
+            Eversince Epicalable was formed, we had an aim to create a chatbot embedded in a GUI to help users move away from the command-line 
             interface. Epicalable also had a long-term goal of creating a dataset stored on a seperate file which could be easily edited 
             by any user with no prior coding knowledge to help expand the chatbot's responses and vocabulary.<br><br>
             Most of the developers working on this project came up with a vague concept of creating an algorithm to run through a
@@ -73,7 +64,7 @@
         <p class="epic-justify">
             <b><u>The Dataset:</u></b><br>
             Upon getting the task to be done on our table, our Researchers firstly scoured the internet looking for which type of file 
-            could best store our dataset. We came across many types such as xml, csv and xaml, but when coming across Json we found that it was easy to read 
+            could best store our dataset. We came across many types such as XML, CSV and XAML, but when coming across Json we found that it was easy to read 
             and write, supports strings, numbers and boolean and is data-oriented. So we decided to adopt Json and an added bonus was Python has built-in support and 
             libaries for Json to help extract data.<br><br>
             Soon we created a json file and inserted our dataset with specific keywords in it. We created it based on the concept that once the user enters a 
@@ -81,14 +72,8 @@
         </p>
 
         <img class="epic-image epic-round-large" src="./Addons/jarindents.png" width="350">
-        <label class="epic-justify">Jarindents: The file where the response is stored</label>
+        <label class="epic-justify">Jarindents: The file where the dataset is stored</label>
 
-        <p class="epic-justify">
-            Sometimes the algorithm might pick wrong responses just because it has found a tag present inside a word. Example is when the user types in the word <b>'dolphin'</b>
-            which has the sub-word <b>'hi'</b>, hence the algorithm will show the response for hi rather than for dolphin. This issue was circumvented 
-            by adding a space after each tag so that if a user enters <b>'hi'</b> it would look for any spaces behind and take input as <b>'hi '</b>, then for <b>'dolphin'</b> 
-            since there is no space as after 'hi' is the letter 'n', the appropriate response is given out.
-        </p>
 
         <p class="epic-justify">
             <b><u>Searching Algorithm:</u></b><br>
@@ -100,6 +85,14 @@
             
             We experimented with a <b>'for loop'</b> to loop through the entire file and an <b>'if loop'</b> to search for matching keywords. Once the matching keyword is 
             found we used the <b>'from random import choice'</b> library to randomly pick a output under <b>'response'</b>.<br><br>
+
+            Sometimes the algorithm might pick wrong responses just because it has found a tag present inside a word. Example is
+            when the user types in the word <b>'dolphin'</b>
+            which has the sub-word <b>'hi'</b>, hence the algorithm will show the response for hi rather than for dolphin. This
+            issue was circumvented
+            by adding a space after each tag so that if a user enters <b>'hi'</b> it would look for any spaces behind and take input
+            as <b>'hi '</b>, then for <b>'dolphin'</b>
+            since there is no space as after 'hi' is the letter 'n', the appropriate response is given out.<br><br>
         </p>
 
         <img class="epic-image epic-round-large" src="./Addons/Renderword.png" width="500">
@@ -123,6 +116,7 @@
         <br>
         <br>
         <b>The above report was presented to Epicalable on 10-Nov-2020.<br>Last Revised: 13-Feb-2024</b>
+        <img class="epic-image epic-round-large" src="https://imgur.com/a/QvI1G4G" width="450">
     </section>
 
 
