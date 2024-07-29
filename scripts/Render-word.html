@@ -71,8 +71,8 @@
             text, JARVIS will search for matching keywords in the text and would show a random appropriate output.
         </p>
 
-        <img class="epic-image epic-round-large" src="./Addons/jarindents.png" width="350">
-        <label class="epic-justify">Jarindents: The file where the dataset is stored</label>
+        <img class="epic-image epic-round-large" src="https://github.com/user-attachments/assets/d6b83cae-53c3-49eb-82a0-26d2e2c3d7c6" width="350">
+        <label class="epic-justify">jarintents: The file where the dataset is stored</label>
 
 
         <p class="epic-justify">
@@ -93,30 +93,47 @@
             by adding a space after each tag so that if a user enters <b>'hi'</b> it would look for any spaces behind and take input
             as <b>'hi '</b>, then for <b>'dolphin'</b>
             since there is no space as after 'hi' is the letter 'n', the appropriate response is given out.<br><br>
+            We also decided to capitalize each word that the user inputs to make sure it matches with our capitalized Json tags and
+            in subsequent versions
+            once JarAudit was introduced as a way to audit the chatbot's history it was seeminglessly integrated into Render-word.
+            Render-word would hence send the
+            input binded with the current time and it will be stored in the JarAudit file.<br><br>
         </p>
 
-        <img class="epic-image epic-round-large" src="./Addons/Renderword.png" width="500">
+        <img class="epic-image epic-round-large" src="https://github.com/user-attachments/assets/691da3da-e04a-4818-bf8f-0921e965de01" width="500">
         <label class="epic-justify">Current iteration of the Render-Word Engine</label>
 
         <p class="epic-justify">
-            We also decided to capitalize each word that the user inputs to make sure it matches with our capitalized Json tags and in subsequent versions
-            once JarAudit was introduced as a way to audit the chatbot's history it was seeminglessly integrated into Render-word. Render-word would hence send the
-            input binded with the current time and it will be stored in the JarAudit file.
+            
         </p>
+
+        <p class="epic-justify">
+            <b><u>Calculating the time and space complexity:</u></b><br>
+            The time complexity of this code is O(n) where n is the number of intents in the Jarintents.json file. This is because the code iterates 
+            through each intent in the Jarintents.json file and checks if the tags of the intent are present in the query input. Hence, the code snippet 
+            contains a loop that iterates through the 'intents' list in the Jarintents file and time complexity is O(n) where n is the number of 
+            elements in the 'intents' list.<br><br>
+            
+            The space complexity of this code is O(1) because the amount of additional space used does not depend on the size of the
+            input.<br><br>
+        </p>
+        <img class="epic-image epic-round-large"src="https://github.com/user-attachments/assets/21672636-e88f-4d97-923a-1806cfa5d3f9" width="450">
+        <label class="epic-justify">The Big O chart, is an asymptotic notation used to express the complexity of an algorithm
+        or its performance as a function of input size.</label>
 
         <p class="epic-justify">
             <b><u>Aftermath:</u></b><br>
             The concept worked and it was successfully implemented into our then under-developing chatbot. Admin Department was
             satisfied with the result and gave the green light to push this code to production. This issue also marks the 
             first time that Epicalable officially recognised the importance of a full time R&D Dept rather than a team from the 
-            Coding Dept that works part-time as R&D researchers and hence the R&D Dept was formed.
+            Coding Dept that works part-time as R&D researchers and hence the R&D Dept was formed.<br><br>
         </p>
-        <img class="epic-image epic-round-large" src="./Addons/opdiff.png" width="450">
+        <img class="epic-image epic-round-large" src="https://github.com/user-attachments/assets/b6d2f410-37e8-4e49-aa52-04b97689d159" width="450">
         <label class="epic-justify">Different conversations from same the input command</label>
+
         <br>
         <br>
-        <b>The above report was presented to Epicalable on 10-Nov-2020.<br>Last Revised: 13-Feb-2024</b>
-        <img class="epic-image epic-round-large" src="https://imgur.com/a/QvI1G4G" width="450">
+        <b>Last Revised: 29-Jul-2024</b>
     </section>
 
 
