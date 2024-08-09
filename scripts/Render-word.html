@@ -45,7 +45,7 @@
         <p><a href="https://epicrd.github.io/RDdept.html"
                 class="epic-button epic-black epic-padding-large epic-large epic-margin-top epic-opacity epic-hover-opacity-on"><--Back To R&D Website</a></p>
 
-        <h1 class="epic-wide">Render-Word Engine</h1>
+        <h1 class="epic-wide">Going Beyond The "If-Else" Chatbots</h1>
         <h3 style="color:#000000;">Research And Development Department</h3>
 
         <p class="epic-justify">
@@ -67,17 +67,58 @@
             could best store our dataset. We came across many types such as XML, CSV and XAML, but when coming across Json we found that it was easy to read 
             and write, supports strings, numbers and boolean and is data-oriented. So we decided to adopt Json and an added bonus was Python has built-in support and 
             libaries for Json to help extract data.<br><br>
-            Soon we created a json file and inserted our dataset with specific keywords in it. We created it based on the concept that once the user enters a 
+            Soon we created a Json file and inserted our dataset with specific keywords in it. We created it based on the concept that once the user enters a 
             text, JARVIS will search for matching keywords in the text and would show a random appropriate output.
         </p>
 
-        <img class="epic-image epic-round-large" src="https://github.com/user-attachments/assets/d6b83cae-53c3-49eb-82a0-26d2e2c3d7c6" width="350">
+        <p class="epic-justify">
+            <b><u>Json's Advantages:</u></b><br>
+            Creating a Json file to store datasets allows developers to append datasets not in the original Code file but in the
+            Json code.<br>
+            1. Separation of Concerns: Json files are focused purely on data representation, while Python files can contain
+            executable
+            code and logic. By keeping data separate from code, you make it easier to manage, update, and maintain the data
+            independently of the logic.<br>
+            2. Decoupling Data from Code: Storing data in Json files allows you to change the data without modifying the Python
+            code.
+            This decoupling is useful for scenarios where you need to update configuration settings, user data, or other types
+            of
+            information without altering the codebase.<br>
+            3. Interoperability: Json (JavaScript Object Notation) is a widely accepted data format that can be used across
+            different
+            programming languages and platforms. This makes it easier to share data between systems written in different
+            languages
+            or to integrate with external systems and APIs.<br>
+            4. Readability and Simplicity: Json files are easy to read and understand. The format is text-based and less complex
+            compared to Python's syntax, which can be beneficial for data configuration files, especially for
+            non-programmers.<br>
+            5. Data Serialization: Json is a lightweight format for data serialization, making it easy to store and transmit
+            structured
+            data. It's particularly useful for web applications where data is often exchanged between a server and client in
+            Json
+            format.<br>
+            6. Standardized Format: Json is a standardized format with well-defined rules for data structures like objects and
+            arrays.
+            This consistency helps avoid issues related to custom serialization and deserialization code.<br>
+            7. Version Control: Json files, being plain text, work well with version control systems like Git. This makes it
+            easy to
+            track changes, revert to previous versions, and collaborate with others.<br>
+            8. Portability: Json files are portable and can be easily shared or transferred between systems or applications
+            without
+            requiring specific Python code or execution environments.<br><br>
+            In contrast, storing data directly in Python files might be more convenient for small-scale projects or scripts where
+            the data and code are tightly coupled. However, for larger projects, data interchange, or configuration management, JSON
+            provides a more flexible and standardized approach.<br><br>
+        </p>
+
+        <img class="epic-image epic-round-large" src="https://github.com/user-attachments/assets/67d039d5-3732-4074-81d5-fd0004c5a4b8" width="350">
         <label class="epic-justify">jarintents: The file where the dataset is stored</label>
 
 
         <p class="epic-justify">
+            <br><br>
             <b><u>Searching Algorithm:</u></b><br>
-            We ran into a new problem, retrieving data from a json file is kind of harder than accessing a dictionary. We would need to open the json file, followed by 
+            We ran into a new problem, retrieving data from a Json file is kind of harder than accessing a dictionary. We would need to open the Json file, followed by 
             taking the user's input and running it through the entire file for matching keywords under <b>'tags'</b> then display a random output from the list of available outputs 
             under <b>'response'</b>.<br><br>
 
@@ -104,36 +145,46 @@
         <label class="epic-justify">Current iteration of the Render-Word Engine</label>
 
         <p class="epic-justify">
-            
+            <br><br>
+            <b><u>Render-Word Inner Workings:</u></b><br>
+            A user enters an input in the input-bar which is stored in variable <b>'que'</b> which is then converted into uppercase (This allows a 
+            standardisation of letters to check against the intents) and stored in <b>'query'</b>.<br>
+            The <b>'query'</b> is then placed in the Audit file along with the time of input. The input <b>'que'</b> which is capitalized is then displayed 
+            on the screen and then the <b>'query'</b> is used by Render-word by looping through the "Jarindents.json".<br>
+            The <b>'tags'</b> in "Jarindents.json" is then matched against the <b>'query'</b> and if the word in <b>'tags'</b> is matched, then a random 
+            response from <b>'response'</b> under the matched word is displayed with the help of <b>choice</b> module in python.
         </p>
 
         <p class="epic-justify">
             <b><u>Calculating the time and space complexity:</u></b><br>
-            The time complexity of this code is O(n) where n is the number of intents in the Jarintents.json file. This is because the code iterates 
-            through each intent in the Jarintents.json file and checks if the tags of the intent are present in the query input. Hence, the code snippet 
+            The time complexity of this code is O(n) where n is the number of intents in the Jarintents.Json file. This is because the code iterates 
+            through each intent in the Jarintents.Json file and checks if the tags of the intent are present in the query input. Hence, the code snippet 
             contains a loop that iterates through the 'intents' list in the Jarintents file and time complexity is O(n) where n is the number of 
             elements in the 'intents' list.<br><br>
             
             The space complexity of this code is O(1) because the amount of additional space used does not depend on the size of the
             input.<br><br>
         </p>
+
         <img class="epic-image epic-round-large"src="https://github.com/user-attachments/assets/21672636-e88f-4d97-923a-1806cfa5d3f9" width="450">
         <label class="epic-justify">The Big O chart, is an asymptotic notation used to express the complexity of an algorithm
         or its performance as a function of input size.</label>
 
         <p class="epic-justify">
-            <b><u>Aftermath:</u></b><br>
-            The concept worked and it was successfully implemented into our then under-developing chatbot. Admin Department was
-            satisfied with the result and gave the green light to push this code to production. This issue also marks the 
-            first time that Epicalable officially recognised the importance of a full time R&D Dept rather than a team from the 
-            Coding Dept that works part-time as R&D researchers and hence the R&D Dept was formed.<br><br>
+            <br><br>
+            <b><u>Different conversations:</u></b><br>
+            The <b>'choice'</b> module allows Render-word to choose a random output and display to the user. This allows different conversations to happen 
+            even if the input command are the same.<br>
+            The below image shows in one conversations the User asks JARVIS <b>'Haw are you'</b> and has a one-sided conversation and the other conversation 
+            has both the User and JARVIS asking each other <b>'How are you'</b>.<br><br>
         </p>
+
         <img class="epic-image epic-round-large" src="https://github.com/user-attachments/assets/b6d2f410-37e8-4e49-aa52-04b97689d159" width="450">
         <label class="epic-justify">Different conversations from same the input command</label>
 
         <br>
         <br>
-        <b>Last Revised: 29-Jul-2024</b>
+        <b>Last Revised: 9-Aug-2024</b>
     </section>
 
 
